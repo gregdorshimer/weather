@@ -1,0 +1,20 @@
+README
+
+A project to review weather data from four locations.
+
+TODO:
+  feature engineering:
+    5-day rolling mean for precip and temp
+    Day-by-day means for precip and temp
+    5-yr means for precip and temp
+  vizzes:
+    The features above, shading/value based on recency (year), hue based on location
+  Review original dataset to find data for Mt. Washington from 2005-present (currently missing)
+
+Tableau:
+https://public.tableau.com/views/Weather_17205519958720/Dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+SQL queries contained in sql.txt run in BigQuery, but not used for pulling data (only practice).
+Data pulled from NCEI-NOAA website:
+https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day
+

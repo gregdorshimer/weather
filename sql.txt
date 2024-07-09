@@ -1,0 +1,95 @@
+﻿-- weather
+-- some queries used to get data from NOAA’s Global Summary of the Day (gsod)
+-- dataset found in BigQuery (‘noaa_gsod’ in public datasets)
+-- queries executed in BigQuery
+
+SELECT *,
+CASE
+  WHEN stn = '997275' THEN 'Portland, ME'
+  WHEN stn = '726130' THEN 'Mt. Washington, NH'
+  WHEN stn = '727930' THEN 'Seattle, WA'
+END AS loc,
+CASE
+  WHEN stn = '997275' THEN '43.65'
+  WHEN stn = '726130' THEN '44.27'
+  WHEN stn = '727930' THEN '47.44'
+END AS lat,
+CASE
+  WHEN stn = '997275' THEN '-70.25'
+  WHEN stn = '726130' THEN '-71.303'
+  WHEN stn = '727930' THEN '-122.31'
+END AS long
+FROM `bigquery-public-data.noaa_gsod.gsod*`
+WHERE
+  (_TABLE_SUFFIX BETWEEN '1998' AND '2025') AND
+  (stn = '997275' OR
+  stn = '726130' OR
+  stn = '727930');
+
+SELECT *,
+CASE
+  WHEN stn = '010010' THEN 'Jan Mayen, Norway'
+END AS loc,
+CASE
+  WHEN stn = '010010' THEN '70.93'
+END AS lat,
+CASE
+  WHEN stn = '010010' THEN '-8.67'
+END AS long
+FROM `bigquery-public-data.noaa_gsod.gsod*`
+WHERE 
+  (_TABLE_SUFFIX BETWEEN '1980' AND '2025') AND
+  (stn = '010010')
+ORDER BY year ASC;
+
+
+SELECT *,
+CASE
+  WHEN stn = '800940' THEN 'Palonegro, Colombia'
+END AS loc,
+CASE
+  WHEN stn = '800940' THEN '7.12'
+END AS lat,
+CASE
+  WHEN stn = '800940' THEN '-73.18'
+END AS long
+FROM `bigquery-public-data.noaa_gsod.gsod*`
+WHERE 
+  (_TABLE_SUFFIX BETWEEN '1980' AND '2025') AND
+  (stn = '800940')
+ORDER BY year ASC;
+
+
+SELECT *,
+CASE
+  WHEN stn = '726130' THEN 'Mt. Washington, NH'
+END AS loc,
+CASE
+  WHEN stn = '726130' THEN '44.27'
+END AS lat,
+CASE
+  WHEN stn = '726130' THEN '-71.303'
+END AS long
+FROM `bigquery-public-data.noaa_gsod.gsod*`
+WHERE 
+  (_TABLE_SUFFIX BETWEEN '1980' AND '2025') AND
+  (stn = '726130')
+ORDER BY year ASC;
+
+
+SELECT *,
+CASE
+  WHEN stn = '787110' THEN 'Puerto Lempira, Honduras'
+END AS loc,
+CASE
+  WHEN stn = '787110' THEN '15.26'
+END AS lat,
+CASE
+  WHEN stn = '787110' THEN '-83.78'
+END AS long
+FROM `bigquery-public-data.noaa_gsod.gsod*`
+WHERE 
+  (_TABLE_SUFFIX BETWEEN '1980' AND '2025') AND
+  (stn = '787110')
+ORDER BY year ASC;
+
