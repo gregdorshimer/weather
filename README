@@ -1,11 +1,11 @@
 README
 
-A project to review weather data from four locations.
+A project to review weather data from four locations. Visualizations available below.
 
 TODO:
   feature engineering:
     5-day rolling mean for precip and temp
-    Day-by-day means for precip and temp
+    Per day year-to-year means for precip and temp
     5-yr means for precip and temp
   vizzes:
     The features above, shading/value based on recency (year), hue based on location
