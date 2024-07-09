@@ -9,7 +9,7 @@ TODO:
     5-yr means for precip and temp
   vizzes:
     The features above, shading/value based on recency (year), hue based on location
-  Review original dataset to find data for Mt. Washington from 2005-present (currently missing)
+    Review original dataset to find data for Mt. Washington from 2005-present (currently missing)
 
 Tableau:
 https://public.tableau.com/views/Weather_17205519958720/Dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
